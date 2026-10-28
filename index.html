@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hover Preview Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="addTabFocus()">
+
+  <header>
+    <h1>Hanoi Street Food Preview</h1>
+    <p class="note">Hover over (or tab to) a picture to see it in the big frame.</p>
+  </header>
+
+  <main>
+    <!-- The preview frame: JavaScript changes its text and background image -->
+    <div id="image">Hover over an image below to display here.</div>
+
+    <!-- Thumbnails: mouseover/focus call upDate(this), mouseleave/blur call unDo().
+         The tabindex attributes are added by addTabFocus() in script.js when the page loads. -->
+    <div class="thumbs">
+      <img class="preview" src="images/pho.svg" alt="A steaming bowl of phở with beef slices, herbs and chopsticks" width="600" height="400" onmouseover="upDate(this)" onmouseleave="unDo()" onfocus="upDate(this)" onblur="unDo()">
+      <img class="preview" src="images/bun-cha.svg" alt="Rice vermicelli beside a bowl of grilled pork patties in dipping sauce" width="600" height="400" onmouseover="upDate(this)" onmouseleave="unDo()" onfocus="upDate(this)" onblur="unDo()">
+      <img class="preview" src="images/banh-mi.svg" alt="A crunchy bánh mì baguette filled with meat, pickles and herbs" width="600" height="400" onmouseover="upDate(this)" onmouseleave="unDo()" onfocus="upDate(this)" onblur="unDo()">
+      <img class="preview" src="images/egg-coffee.svg" alt="A glass of egg coffee with a thick golden foam on top" width="600" height="400" onmouseover="upDate(this)" onmouseleave="unDo()" onfocus="upDate(this)" onblur="unDo()">
+      <img class="preview" src="images/nem-ran.svg" alt="Crispy fried spring rolls with lettuce and dipping sauce" width="600" height="400" onmouseover="upDate(this)" onmouseleave="unDo()" onfocus="upDate(this)" onblur="unDo()">
+      <img class="preview" src="images/che.svg" alt="A tall glass of chè, a layered sweet dessert with beans, jelly and ice" width="600" height="400" onmouseover="upDate(this)" onmouseleave="unDo()" onfocus="upDate(this)" onblur="unDo()">
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Nguyễn Văn Minh Tùng. JavaScript practice.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
